@@ -15,7 +15,15 @@ class ViewController: UIViewController {
     
     var leftDiceNumber = 0
     var rightDiceNumber = 6
+    var images = [
+        #imageLiteral(resourceName: "DiceOne"),
+        #imageLiteral(resourceName: "DiceTwo"),
+        #imageLiteral(resourceName: "DiceThree"),
+        #imageLiteral(resourceName: "DiceFour"),
+        #imageLiteral(resourceName: "DiceFive"),
+        #imageLiteral(resourceName: "DiceSix")
     
+    ]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -28,15 +36,7 @@ class ViewController: UIViewController {
         else{
             leftDiceNumber = 0
         }
-        diceImage1.image = [
-            #imageLiteral(resourceName: "DiceOne"),
-            #imageLiteral(resourceName: "DiceTwo"),
-            #imageLiteral(resourceName: "DiceThree"),
-            #imageLiteral(resourceName: "DiceFour"),
-            #imageLiteral(resourceName: "DiceFive"),
-            #imageLiteral(resourceName: "DiceSix")
-        
-        ][leftDiceNumber]
+        diceImage1.image = images[leftDiceNumber]
         
     }
     
