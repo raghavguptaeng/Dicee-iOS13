@@ -30,13 +30,10 @@ class ViewController: UIViewController {
     }
 
     @IBAction func RollDice(_ sender: UIButton) {
-        if(leftDiceNumber<5){
-            leftDiceNumber = leftDiceNumber+1
-        }
-        else{
-            leftDiceNumber = 0
-        }
+        leftDiceNumber =  Int.random(in: 0...5)
+        rightDiceNumber = Int.random(in: 0...5)
         diceImage1.image = images[leftDiceNumber]
+        diceImage2.image = images[rightDiceNumber]
         
     }
     
